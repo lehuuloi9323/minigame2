@@ -318,12 +318,10 @@
             let allResults = [];
             $('#quayso').click(function() {
                 const sequences = [
-                    '11223',
-                    '13576',
-                    '25253',
-                    '99965',
-                    '77896',
-                    '99999',
+
+                    @foreach ($random_numbers as $random_number)
+                        '{{ $random_number->code_staff }}',
+                    @endforeach
                 ];
 
                 const updateNumbers = () => {

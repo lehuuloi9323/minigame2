@@ -2,6 +2,7 @@
 @section('title', 'Thêm')
 @section('content')
 <div id="content" class="container-fluid">
+    
     <div class="card">
         <div class="card-header font-weight-bold">
             Import danh sách người chơi
@@ -10,7 +11,7 @@
             @if (!empty(session('status')))
             <div class="alert alert-success">{{ Session('status') }}</div>
             @endif
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('lucky_number.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="file">Import người chơi</label>
@@ -23,6 +24,8 @@
 
                 <button type="submit" class="btn btn-primary">Thêm mới</button>
             </form>
+            <br>
+            <a href="{{ route('lucky_number.delete') }}" class="btn-danger">Xóa toàn bộ người chơi</a>
         </div>
     </div>
 </div>

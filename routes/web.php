@@ -44,6 +44,9 @@ Route::get('/adminAEniso@123/lucky_cart/edit/{id}', [App\Http\Controllers\LuckyC
 Route::post('/adminAEniso@123/lucky_cart/update/{id}', [App\Http\Controllers\LuckyCardController::class, 'update'])->name('lucky_card.update');
 Route::get('/adminAEniso@123/lucky_cart/delete/{id}', [App\Http\Controllers\LuckyCardController::class, 'delete'])->name('lucky_card.delete');
 Route::get('/adminAEniso@123/lucky_number/add', [App\Http\Controllers\LuckyNumberController::class, 'add'])->name('lucky_number.add');
+Route::post('/adminAEniso@123/lucky_number/store', [App\Http\Controllers\LuckyNumberController::class, 'store'])->name('lucky_number.store');
+Route::get('/adminAEniso@123/lucky_number/delete', [App\Http\Controllers\LuckyNumberController::class, 'delete'])->name('lucky_number.delete');
+
 
 
 
